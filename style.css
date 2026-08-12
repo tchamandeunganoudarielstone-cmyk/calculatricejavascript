@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  --orange-color: #fa803a;
+  --orange-color-body: #fca26e;
+  --font: #333;
+}
+body {
+  font-family: roboto, Arial, sans-serif;
+  background-color: var(--orange-color-body);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--font);
+  padding: 20px;
+}
+.corp {
+  box-shadow:
+    5px 0 10px rgba(0, 0, 0, 0.2),
+    -5px 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 520px;
+  min-width: 280px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 30px;
+}
+.ecran {
+  width: 99%;
+  background-color: #f0f7ff;
+  height: 60px;
+  margin-top: 20px;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  font-size: 40px;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+.boutons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.boutons button {
+  width: 100%;
+  min-height: 56px;
+  border-radius: 28px;
+  font-weight: 600;
+  border: none;
+  background-color: #f1f4f9;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 0 14px;
+}
+.boutons .spe {
+  grid-column: span 2;
+  height: 56px;
+  border-radius: 50px;
+  background-color: var(--orange-color);
+  color: #f0f7ff;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  .corp {
+    width: 100%;
+    min-width: auto;
+    padding: 16px;
+    gap: 24px;
+    height: auto;
+  }
+
+  .ecran {
+    height: auto;
+    font-size: 2rem;
+    padding: 16px;
+  }
+
+  .boutons {
+    gap: 12px;
+  }
+
+  .boutons button {
+    min-height: 56px;
+  }
+
+  .boutons .spe {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .corp {
+    width: 70%;
+    max-width: 520px;
+  }
+
+  .ecran {
+    font-size: 42px;
+  }
+
+  .boutons button {
+    min-height: 60px;
+  }
+
+  .boutons .spe {
+    min-height: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .corp {
+    width: min(520px, 35vw);
+    max-width: 520px;
+  }
+
+  .ecran {
+    font-size: 44px;
+  }
+
+  .boutons button {
+    min-height: 64px;
+  }
+
+  .boutons .spe {
+    min-height: 64px;
+  }
+}
